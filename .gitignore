@@ -12,9 +12,7 @@ airflow.db
 airflow.cfg
 *.pid
 
-# Data outputs
-processed/
-bad_records/
+
 
 # OS
 .DS_Store
