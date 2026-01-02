@@ -13,45 +13,45 @@ The pipeline ingests raw CSV employee data, validates and cleans it, applies bus
 
 #### Architecture
 CSV Files
-   ↓
+   ->
 Spark ETL (Validation + Transformation)
-   ↓
+   ->
 Parquet Output (Partitioned by load_date)
-   ↓
+   ->
 Airflow DAG (Scheduling & Monitoring)
 
 #### ETL Logic
-Extract
+-- Extract
 
-Reads multiple CSV files from input directory
+-- Reads multiple CSV files from input directory
 
-Uses an explicit schema to avoid inference issues
+-- Uses an explicit schema to avoid inference issues
 
-Transform
+-- Transform
 
-Casts data types (age, salary, active)
+-- Casts data types (age, salary, active)
 
-Handles invalid values (NaN, nulls, negative salary)
+-- Handles invalid values (NaN, nulls, negative salary)
 
-Applies row-level validation rules:
+-- Applies row-level validation rules:
 
-name must not be empty
+-- name must not be empty
 
-age >= 18
+-- age >= 18
 
-salary >= 0
+-- salary >= 0
 
-Calculates bad-row ratio
+-- Calculates bad-row ratio
 
-Pipeline fails if invalid rows exceed 30%
+-- Pipeline fails if invalid rows exceed 25%
 
-Load
+-- Load
 
-Writes valid rows as partitioned Parquet
+-- Writes valid rows as partitioned Parquet
 
-Writes invalid rows to bad_records/
+-- Writes invalid rows to bad_records/
 
-Adds load_date partition column
+-- Adds load_date partition column
 
 #### Key Production Concepts Implemented
 
