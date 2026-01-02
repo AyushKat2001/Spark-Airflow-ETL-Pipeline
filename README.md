@@ -107,5 +107,5 @@ This pipeline reflects real-world data engineering patterns used in production s
 - Strong data quality enforcement
 
 ### Author
-#### Ayush
+#### Ayush Katiyar
 (Data Engineering Practice Project)
