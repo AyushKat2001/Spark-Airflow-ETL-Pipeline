@@ -90,9 +90,9 @@ Trigger DAG from UI
 
 #### Output
 
-Valid data → processed/load_date=YYYY-MM-DD/
+Valid data → processed/load_date=YYYY-MM-DD/  
 
-Invalid data → processed/bad_records/
+Invalid data → processed/bad_records/  
 
 Parquet file can be viewed using parquetviewfile.csv python file
 
