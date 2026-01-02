@@ -67,10 +67,11 @@ Airflow DAG (Scheduling & Monitoring)
 
 - Airflow retries & failure alerts
 
-#### Example Input
+#### Example Input 
 name,age,salary,active
 Liam,34,72000.50,True
 Oliver,15,48000.00,False
+example.csv is there in the input folder as a demo file
 
 #### How to Run Spark Job Manually
 spark-submit spark_etl.py input/ processed/
@@ -81,11 +82,9 @@ Place DAG file in:
 
 airflow/dags/
 
-
 Start Airflow:
 
-airflow standalone
-
+airflow standalone 
 
 Trigger DAG from UI
 
@@ -94,6 +93,8 @@ Trigger DAG from UI
 Valid data → processed/load_date=YYYY-MM-DD/
 
 Invalid data → processed/bad_records/
+
+Parquet file can be viewed using parquetview.csv python file
 
 ### Why This Project Matters
 
