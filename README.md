@@ -94,17 +94,17 @@ Valid data → processed/load_date=YYYY-MM-DD/
 
 Invalid data → processed/bad_records/
 
-Parquet file can be viewed using parquetview.csv python file
+Parquet file can be viewed using parquetviewfile.csv python file
 
 ### Why This Project Matters
 
 This pipeline reflects real-world data engineering patterns used in production systems:
 
-Spark for scale
+- Spark for scale
 
-Airflow for orchestration
+- Airflow for orchestration
 
-Strong data quality enforcement
+- Strong data quality enforcement
 
 ### Author
 #### Ayush
